@@ -20,8 +20,7 @@ jobs:
     steps:
     - uses: softprops/action-gh-release@v1
     - name: Build Solution
-    tag_name:
+    tag_name: build1
       shell: cmd
       working-directory: ${{github.workspace}}
       run: build\build_verbose.cmd
-      GITHUB_TOKEN: ${{ secrets.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 }}
