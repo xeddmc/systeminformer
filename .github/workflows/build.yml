@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: MSBuild
+name: BuildMS
 
 on:
   push:
@@ -18,8 +18,9 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-    - uses: actions/create-release@v1
+    - uses: softprops/action-gh-release@v1
     - name: Build Solution
       shell: cmd
       working-directory: ${{github.workspace}}
       run: build\build_verbose.cmd
+      token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
