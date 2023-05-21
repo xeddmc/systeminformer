@@ -23,5 +23,3 @@ jobs:
       shell: cmd
       working-directory: ${{github.workspace}}
       run: build\build_verbose.cmd
-      with:
-        token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
